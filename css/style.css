@@ -1,27 +1,10 @@
-/**
- * WEBSITE: https://themefisher.com
- * TWITTER: https://twitter.com/themefisher
- * FACEBOOK: https://www.facebook.com/themefisher
- * GITHUB: https://github.com/themefisher/
- */
 
-/**
-*
-* ---------------------------------------------------------------------------
-*
-* Template : Blue - A One-Page HTML Portfolio/Business Template
-* Author : Muhammad Morshd
-* Author URI : http://morshed.im
-*
-* --------------------------------------------------------------------------- 
-*
-*/
 /* =================================== */
 /*	Basic Style 
 /* =================================== */
 body {
   background-color: #fff;
-  font-family: "Open Sans", sans-serif;
+  font-family: "homa", sans-serif;
   line-height: 24px;
   font-size: 16px;
   color: #818181;
@@ -1502,4 +1485,79 @@ textarea.form-control {
 #footer-bottom p {
   font-size: 13px;
 }
-/*# sourceMappingURL=style.css.map */
+/* ! NOTE Progress Bar */
+#progress-bar{
+  position:fixed;
+  height:4px;
+  margin-top:2px;
+  width:0%;
+  background:rgb(9, 157, 178);
+  background:-webkit-linear-gradient(to right,#28add2,rgb(9, 157, 178));
+  background:linear-gradient(to right,#28add2,rgb(9, 157, 178))
+}
+/* *-----------------END------------------- */
+
+/* ! NOTE Back to top  */
+#button {
+  display: inline-block;
+  background:-webkit-linear-gradient(rgb(9, 157, 178) 1%, rgb(6, 112, 126) 100%);
+  background:linear-gradient(rgb(9, 157, 178) 1%, rgb(6, 112, 126) 100%);
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  border-radius: 60px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  box-shadow: 0px 0px 15px #282727
+
+}
+#button::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 55px;
+  color: #fff;
+}
+#button:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#button:active {
+  background-color: #555;
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
+@media (min-width: 500px) {
+  #button {
+    margin: 30px;
+  }
+}
+@media (max-width: 991px) {
+  #button{
+    bottom: 50px;
+  }
+}
+/* * ---------END---------- */
+/* ! NOTE Appear Animation */
+.appear{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.appear.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+/* *-----------------END------------------- */

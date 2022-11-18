@@ -721,7 +721,7 @@ main > section {
   top: auto;
 }
 
-.portfolio-filter li:last-child a::after {
+.portfolio-filter li:first-child a::after {
   content: none;
 }
 
@@ -729,12 +729,18 @@ main > section {
   cursor: pointer;
   overflow: hidden;
   position: relative;
+
 }
 
 .portfolio-item img {
   transition: all 0.4s ease 0s;
+  margin:10px
 }
-
+@media (max-width: 968px) {
+  .portfolio-item img {
+    margin:20px 0 0 0 !important;
+  }
+}
 .portfolio-item:hover img {
   transform: translateY(-105px);
 }
@@ -753,6 +759,7 @@ figcaption.mask {
 
 .portfolio-item:hover figcaption.mask {
   transform: translateY(0px);
+  text-align: right;
 }
 
 figcaption.mask h3 {
@@ -763,6 +770,7 @@ figcaption.mask h3 {
   opacity: 0;
   transform: translateY(30px);
   transition: all 0.4s ease 0.1s;
+  text-align: right;
 }
 
 figcaption.mask p {
@@ -770,12 +778,14 @@ figcaption.mask p {
   transform: translateY(30px);
   opacity: 0;
   transition: all 0.4s ease 0.3s;
+  text-align: right;
 }
 
 .portfolio-item:hover figcaption.mask h3,
 .portfolio-item:hover figcaption.mask p {
   opacity: 1;
   transform: translateY(0px);
+  text-align: right;
 }
 
 ul.external {

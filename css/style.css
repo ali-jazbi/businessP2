@@ -257,8 +257,6 @@ main > section {
 
 .nav-link {
   font-size: 13px;
-  text-transform: uppercase;
-  font-weight: bold;
 }
 
 .navbar-dark .navbar-nav .nav-link {

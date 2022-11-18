@@ -4,10 +4,15 @@
 /* =================================== */
 body {
   background-color: #fff;
-  font-family: "homa", sans-serif;
+  font-family: homa, sans-serif;
+  -webkit-font-smoothing: antialiased;
   line-height: 24px;
   font-size: 16px;
   color: #818181;
+}
+@font-face {
+  font-family: homa;
+  src: url(../fonts/B\ Homa_0.ttf);
 }
 
 figure,
